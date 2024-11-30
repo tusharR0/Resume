@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Resume</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    /* styles.css */
+    
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background: linear-gradient(to right, #d76578, #ADD8E6);
+        /* Light pink-blue mix */
+        color: #404588;
+        font-size: 50px;
+        /* Updated font size */
+    }
+    
+    header {
+        background-color: ;
+        color: rgb(60, 32, 113);
+        text-align: center;
+        padding: 1em 0;
+    }
+    
+    nav {
+        background-color: 2f0529;
+    }
+    
+    nav ul {
+        list-style-type: none;
+        align-items: center;
+        margin: 10px;
+        overflow: hidden;
+    }
+    
+    nav ul li {
+        color: #81b3bf;
+        float: left;
+    }
+    
+    nav ul li a {
+        color: white;
+        text-decoration: none;
+        padding: 10px 30px;
+        display: block;
+        background-color: #59175e;
+        border-radius: 5px;
+        /* optional: for rounded corners */
+    }
+    
+    nav ul li a:hover {
+        background-color: #111;
+    }
+    
+    section {
+        padding: 20px;
+        margin: 20px;
+        background-color: white;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        font-size: 0.5em;
+        /* Adjusted to maintain readability with larger base font size */
+    }
+</style>
+
+<body>
+    <header>
+        <h1>Tushar Raut's Resume</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#certificates">Certificates</a></li>
+        </ul>
+    </nav>
+    <section id="home">
+        <h2>
+            summary
+        </h2>
+        <p>
+            With a passion for crafting elegant web experiences, i am is an adept web developer specializing in HTML, CSS, and JavaScript. I brings creative solutions to life through meticulously designed user interfaces and dynamic functionalities. My expertise
+            in front-end development ensures that each project not only meets modern web standards but also delivers an engaging and intuitive user experience.
+        </p>
+        </p>
+    </section>
+    <section id="experience">
+        <h2>Experience</h2>
+        <h3>Yet i have only my learning as a experience</h3>
+        <!-- <p>Company Name - Location</p>
+        <p>Dates Employed</p>
+        <ul>
+            <li>Achievements and responsibilities</li>
+        </ul>
+        <h3>Job Title 2</h3>
+        <p>Company Name - Location</p>
+        <p>Dates Employed</p>
+        <ul>
+            <li>Achievements and responsibilities</li>
+        </ul> -->
+    </section>
+    <section id="projects">
+        <h2>Projects</h2>
+        <h3>MY Resume Buliding</h3>
+        <p> I devloped a web page having my summry of resume , experince ,project, certificate.this webpageismade up of HTML CSS JS
+        </p>
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>javascript</li>
+            <!-- <h3>Project Title 2</h3>
+            <p>Description of the project</p>
+            <ul>
+                <li>Technologies used</li>
+                <li>Key accomplishments</li> -->
+        </ul>
+    </section>
+    <section id="education">
+        <h2>Education</h2>
+        <h3>B.Tech </h3>
+        <p>S.B.Jain Institute of manegment,Research and Technology Nagpur- 441501</p>
+        <p>2022-2026</p>
+        <ul>
+            <li>Artificial Intelligence and Machine Learning(AIML)</li>
+        </ul>
+    </section>
+    <section id="certificates">
+        <h2>Certificates</h2>
+        <h3>
+            <a href="https://www.hackerrank.com/certificates/bb29335859cf">Python (Basic)</a>
+        </h3>
+        <p>hackerrank - july-24</p>
+        <a href="https://www.hackerrank.com/certificates/6f882416d227">
+            <h3>SQL ( Basic )</h3>
+        </a>
+
+        <p>Hackarrank -july-24</p>
+    </section>
+
+</body>
+
+</html>
+
+<script>
+    // script.js
+    document.addEventListener('DOMContentLoaded', function() {
+        const links = document.querySelectorAll('nav ul li a');
+
+        links.forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetSection = document.getElementById(targetId);
+
+                if (targetSection) {
+                    window.scrollTo({
+                        top: targetSection.offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    });
+</script>
+
+</html>
