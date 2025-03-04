@@ -1,79 +1,138 @@
 <!DOCTYPE html>
-
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Resume</title>
+    <title>Tushar Raut - Resume</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+        /* General Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #ff758c, #ff7eb3);
+            color: #333;
+            font-size: 16px;
+            transition: background 0.5s ease-in-out;
+        }
+
+        header {
+            background: rgba(255, 255, 255, 0.9);
+            text-align: center;
+            padding: 20px;
+            font-size: 2em;
+            font-weight: 600;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        nav {
+            background: #2f0529;
+            text-align: center;
+            padding: 15px;
+            position: sticky;
+            top: 80px;
+            z-index: 999;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 12px 20px;
+            font-weight: 500;
+            border-radius: 8px;
+            transition: all 0.3s ease-in-out;
+            background: #59175e;
+        }
+
+        nav ul li a:hover {
+            background: #ff6584;
+            transform: scale(1.1);
+            box-shadow: 0 4px 10px rgba(255, 101, 132, 0.5);
+        }
+
+        /* Section Styling */
+        section {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 30px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            transform: translateY(30px);
+            opacity: 0;
+            transition: all 0.6s ease-in-out;
+        }
+
+        section h2 {
+            color: #ff4f7b;
+            font-size: 1.8em;
+            margin-bottom: 15px;
+            border-bottom: 3px solid #ff4f7b;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        section.show {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        /* Button & Link Styling */
+        a {
+            text-decoration: none;
+            color: #ff4f7b;
+            font-weight: 600;
+            transition: color 0.3s ease-in-out;
+        }
+
+        a:hover {
+            color: #2f0529;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            nav ul li a {
+                display: block;
+            }
+
+            section {
+                padding: 20px;
+            }
+        }
+    </style>
 </head>
-<style>
-    /* styles.css */
-    
-    body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        background: linear-gradient(to right, #d76578, #ADD8E6);
-        /* Light pink-blue mix */
-        color: #404588;
-        font-size: 50px;
-        /* Updated font size */
-    }
-    
-    header {
-        background-color: ;
-        color: rgb(60, 32, 113);
-        text-align: center;
-        padding: 1em 0;
-    }
-    
-    nav {
-        background-color: 2f0529;
-    }
-    
-    nav ul {
-        list-style-type: none;
-        align-items: center;
-        margin: 10px;
-        overflow: hidden;
-    }
-    
-    nav ul li {
-        color: #81b3bf;
-        float: left;
-    }
-    
-    nav ul li a {
-        color: white;
-        text-decoration: none;
-        padding: 10px 30px;
-        display: block;
-        background-color: #59175e;
-        border-radius: 5px;
-        /* optional: for rounded corners */
-    }
-    
-    nav ul li a:hover {
-        background-color: #111;
-    }
-    
-    section {
-        padding: 20px;
-        margin: 20px;
-        background-color: white;
-        border-radius: 8px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        font-size: 0.5em;
-        /* Adjusted to maintain readability with larger base font size */
-    }
-</style>
 
 <body>
     <header>
-        <h1>Tushar Raut's Resume</h1>
+        Tushar Raut's Resume
     </header>
+
     <nav>
         <ul>
             <li><a href="#home">Home</a></li>
@@ -83,93 +142,45 @@
             <li><a href="#certificates">Certificates</a></li>
         </ul>
     </nav>
+
     <section id="home">
-        <h2>
-            summary
-        </h2>
+        <h2>Summary</h2>
         <p>
-            With a passion for crafting elegant web experiences, i am is an adept web developer specializing in HTML, CSS, and JavaScript. I brings creative solutions to life through meticulously designed user interfaces and dynamic functionalities. My expertise
-            in front-end development ensures that each project not only meets modern web standards but also delivers an engaging and intuitive user experience.
-        </p>
+            Passionate web developer specializing in HTML, CSS, and JavaScript. I bring creative solutions to life through engaging UI/UX designs
+            and dynamic functionalities, ensuring modern, user-friendly web experiences.
         </p>
     </section>
+
     <section id="experience">
         <h2>Experience</h2>
-        <h3>Yet i have only my learning as a experience</h3>
-        <!-- <p>Company Name - Location</p>
-        <p>Dates Employed</p>
-        <ul>
-            <li>Achievements and responsibilities</li>
-        </ul>
-        <h3>Job Title 2</h3>
-        <p>Company Name - Location</p>
-        <p>Dates Employed</p>
-        <ul>
-            <li>Achievements and responsibilities</li>
-        </ul> -->
+        <p>Currently enhancing my skills through learning and building projects.</p>
     </section>
+
     <section id="projects">
         <h2>Projects</h2>
-        <h3>MY Resume Buliding</h3>
-        <p> I devloped a web page having my summry of resume , experince ,project, certificate.this webpageismade up of HTML CSS JS
-        </p>
+        <h3>Resume Website</h3>
+        <p>Developed this interactive resume webpage using:</p>
         <ul>
             <li>HTML</li>
-            <li>CSS</li>
-            <li>javascript</li>
-            <!-- <h3>Project Title 2</h3>
-            <p>Description of the project</p>
-            <ul>
-                <li>Technologies used</li>
-                <li>Key accomplishments</li> -->
+            <li>CSS (Animations, Layout, Styling)</li>
+            <li>JavaScript (Smooth Scrolling, Dynamic Effects)</li>
         </ul>
     </section>
+
     <section id="education">
         <h2>Education</h2>
-        <h3>B.Tech </h3>
-        <p>S.B.Jain Institute of manegment,Research and Technology Nagpur- 441501</p>
-        <p>2022-2026</p>
-        <ul>
-            <li>Artificial Intelligence and Machine Learning(AIML)</li>
-        </ul>
+        <h3>B.Tech - Artificial Intelligence & Machine Learning</h3>
+        <p>S.B. Jain Institute of Management, Research and Technology, Nagpur (2022 - 2026)</p>
     </section>
+
     <section id="certificates">
         <h2>Certificates</h2>
-        <h3>
-            <a href="https://www.hackerrank.com/certificates/bb29335859cf">Python (Basic)</a>
-        </h3>
-        <p>hackerrank - july-24</p>
-        <a href="https://www.hackerrank.com/certificates/6f882416d227">
-            <h3>SQL ( Basic )</h3>
-        </a>
+        <h3><a href="https://www.hackerrank.com/certificates/bb29335859cf">Python (Basic) - HackerRank</a></h3>
+        <p>July 2024</p>
 
-        <p>Hackarrank -july-24</p>
+        <h3><a href="https://www.hackerrank.com/certificates/6f882416d227">SQL (Basic) - HackerRank</a></h3>
+        <p>July2024</p>
     </section>
 
-</body>
-
-</html>
-
-<script>
-    // script.js
-    document.addEventListener('DOMContentLoaded', function() {
-        const links = document.querySelectorAll('nav ul li a');
-
-        links.forEach(link => {
-            link.addEventListener('click', function(e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href').substring(1);
-                const targetSection = document.getElementById(targetId);
-
-                if (targetSection) {
-                    window.scrollTo({
-                        top: targetSection.offsetTop,
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-    });
-</script>
-
-</html>
+    <script>
+        document.addEventListener
