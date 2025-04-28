@@ -2,185 +2,190 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tushar Raut - Resume</title>
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tushar Raut - Resume</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
-        /* General Styles */
-        body {
-            font-family: 'Poppins', sans-serif;
-            margin: 0;
-            padding: 0;
-            background: linear-gradient(to right, #ff758c, #ff7eb3);
-            color: #333;
-            font-size: 16px;
-            transition: background 0.5s ease-in-out;
-        }
+    /* General Styles */
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      background: linear-gradient(to right, #ff758c, #ff7eb3);
+      color: #333;
+      font-size: 16px;
+      transition: background 0.5s ease;
+      scroll-behavior: smooth;
+    }
 
-        header {
-            background: rgba(255, 255, 255, 0.9);
-            text-align: center;
-            padding: 20px;
-            font-size: 2em;
-            font-weight: 600;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            backdrop-filter: blur(10px);
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        }
+    header, nav {
+      position: sticky;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(10px);
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
 
-        nav {
-            background: #2f0529;
-            text-align: center;
-            padding: 15px;
-            position: sticky;
-            top: 80px;
-            z-index: 999;
-        }
+    header {
+      top: 0;
+      padding: 20px;
+      font-size: 2em;
+      font-weight: 600;
+    }
 
-        nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-        }
+    nav {
+      top: 80px;
+      background: #2f0529;
+      padding: 15px;
+      z-index: 999;
+    }
 
-        nav ul li {
-            display: inline;
-        }
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
 
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            padding: 12px 20px;
-            font-weight: 500;
-            border-radius: 8px;
-            transition: all 0.3s ease-in-out;
-            background: #59175e;
-        }
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      padding: 12px 20px;
+      font-weight: 500;
+      border-radius: 8px;
+      background: #59175e;
+      transition: 0.3s;
+    }
 
-        nav ul li a:hover {
-            background: #ff6584;
-            transform: scale(1.1);
-            box-shadow: 0 4px 10px rgba(255, 101, 132, 0.5);
-        }
+    nav ul li a:hover {
+      background: #ff6584;
+      transform: scale(1.1);
+      box-shadow: 0 4px 10px rgba(255, 101, 132, 0.5);
+    }
 
-        /* Section Styling */
-        section {
-            max-width: 800px;
-            margin: 40px auto;
-            padding: 30px;
-            background: white;
-            border-radius: 12px;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-            transform: translateY(30px);
-            opacity: 0;
-            transition: all 0.6s ease-in-out;
-        }
+    section {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 30px;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      transform: translateY(30px);
+      opacity: 0;
+      transition: 0.6s ease;
+    }
 
-        section h2 {
-            color: #ff4f7b;
-            font-size: 1.8em;
-            margin-bottom: 15px;
-            border-bottom: 3px solid #ff4f7b;
-            display: inline-block;
-            padding-bottom: 5px;
-        }
+    section.show {
+      transform: translateY(0);
+      opacity: 1;
+    }
 
-        section.show {
-            transform: translateY(0);
-            opacity: 1;
-        }
+    section h2 {
+      color: #ff4f7b;
+      font-size: 1.8em;
+      margin-bottom: 15px;
+      border-bottom: 3px solid #ff4f7b;
+      display: inline-block;
+      padding-bottom: 5px;
+    }
 
-        /* Button & Link Styling */
-        a {
-            text-decoration: none;
-            color: #ff4f7b;
-            font-weight: 600;
-            transition: color 0.3s ease-in-out;
-        }
+    a {
+      text-decoration: none;
+      color: #ff4f7b;
+      font-weight: 600;
+      transition: 0.3s;
+    }
 
-        a:hover {
-            color: #2f0529;
-        }
+    a:hover {
+      color: #2f0529;
+    }
 
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            nav ul {
-                flex-direction: column;
-                gap: 10px;
-            }
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        gap: 10px;
+      }
 
-            nav ul li a {
-                display: block;
-            }
+      nav ul li a {
+        display: block;
+      }
 
-            section {
-                padding: 20px;
-            }
-        }
-    </style>
+      section {
+        padding: 20px;
+      }
+    }
+  </style>
 </head>
 
 <body>
-    <header>
-        Tushar Raut's Resume
-    </header>
 
-    <nav>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#certificates">Certificates</a></li>
-        </ul>
-    </nav>
+  <header>
+    Tushar Raut's Resume
+  </header>
 
-    <section id="home">
-        <h2>Summary</h2>
-        <p>
-            Passionate web developer specializing in HTML, CSS, and JavaScript. I bring creative solutions to life through engaging UI/UX designs
-            and dynamic functionalities, ensuring modern, user-friendly web experiences.
-        </p>
-    </section>
+  <nav>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#certificates">Certificates</a></li>
+    </ul>
+  </nav>
 
-    <section id="experience">
-        <h2>Experience</h2>
-        <p>Currently enhancing my skills through learning and building projects.</p>
-    </section>
+  <section id="home">
+    <h2>Summary</h2>
+    <p>
+      Passionate web developer specializing in HTML, CSS, and JavaScript. I bring creative solutions to life through engaging UI/UX designs
+      and dynamic functionalities, ensuring modern, user-friendly web experiences.
+    </p>
+  </section>
 
-    <section id="projects">
-        <h2>Projects</h2>
-        <h3>Resume Website</h3>
-        <p>Developed this interactive resume webpage using:</p>
-        <ul>
-            <li>HTML</li>
-            <li>CSS (Animations, Layout, Styling)</li>
-            <li>JavaScript (Smooth Scrolling, Dynamic Effects)</li>
-        </ul>
-    </section>
+  <section id="experience">
+    <h2>Experience</h2>
+    <p>Currently enhancing my skills through learning and building projects.</p>
+  </section>
 
-    <section id="education">
-        <h2>Education</h2>
-        <h3>B.Tech - Artificial Intelligence & Machine Learning</h3>
-        <p>S.B. Jain Institute of Management, Research and Technology, Nagpur (2022 - 2026)</p>
-    </section>
+  <section id="projects">
+    <h2>Projects</h2>
+    <h3>Resume Website</h3>
+    <p>Developed this interactive resume webpage using:</p>
+    <ul>
+      <li>HTML</li>
+      <li>CSS (Animations, Layout, Styling)</li>
+      <li>JavaScript (Smooth Scrolling, Dynamic Effects)</li>
+    </ul>
+  </section>
 
-    <section id="certificates">
-        <h2>Certificates</h2>
-        <h3><a href="https://www.hackerrank.com/certificates/bb29335859cf">Python (Basic) - HackerRank</a></h3>
-        <p>July 2024</p>
+  <section id="education">
+    <h2>Education</h2>
+    <h3>B.Tech - Artificial Intelligence & Machine Learning</h3>
+    <p>S.B. Jain Institute of Management, Research and Technology, Nagpur (2022 - 2026)</p>
+  </section>
 
-        <h3><a href="https://www.hackerrank.com/certificates/6f882416d227">SQL (Basic) - HackerRank</a></h3>
-        <p>July2024</p>
-    </section>
+  <section id="certificates">
+    <h2>Certificates</h2>
+    <h3><a href="https://www.hackerrank.com/certificates/bb29335859cf" target="_blank">Python (Basic) - HackerRank</a></h3>
+    <p>July 2024</p>
 
-    <script>
-        document.addEventListener
+    <h3><a href="https://www.hackerrank.com/certificates/6f882416d227" target="_blank">SQL (Basic) - HackerRank</a></h3>
+    <p>July 2024</p>
+  </section>
+
+  <script>
+    // Animate sections on scroll
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => entry.isIntersecting && entry.target.classList.add('show'));
+    }, { threshold: 0.2 });
+
+    document.querySelectorAll('section').forEach(sec => observer.observe(sec));
+  </script>
+
+</body>
+
+</html>
